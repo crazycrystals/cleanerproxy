@@ -1,0 +1,26 @@
+# Compiled binaries
+cleanerproxy
+evilproxy
+
+# Model weights (multi-GB, downloaded by scripts/fetch-model.sh)
+models/*.gguf
+models/download.log
+
+# Runtime state
+.cleanerproxy-vault.json
+
+# Environment (contains credentials — use .env.example as template)
+.env
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
+
+# Notification detail files (test artifacts and runtime output)
+internal/notify/*.txt
+!internal/notify/*_test.go
+
+# TLS certs
+nginx/certs/

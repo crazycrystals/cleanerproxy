@@ -1,0 +1,8 @@
+# Model weights are multi-gigabyte and are mounted into the guardian container
+# at runtime, never copied into an image. Without this entry every
+# `docker build .` would ship them to the daemon as build context.
+models/
+
+guardian/
+nginx/certs/
+*.log
